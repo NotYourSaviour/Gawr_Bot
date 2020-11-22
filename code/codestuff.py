@@ -217,7 +217,7 @@ async def nut(ctx, member: discord.Member):
   await ctx.send(embed=embed)
 
 #error handling
-@bot.command
+@bot.event
 async def on_command_error(ctx, error):
   if isinstance(error, commands.MissingRequiredArgument):
     message = "You seem to be missing an input, please **try again?**"
